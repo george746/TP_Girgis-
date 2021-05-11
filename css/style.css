@@ -1,0 +1,238 @@
+/* reset css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap');
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body{
+    font: 1.6rem 'Montserrat', sans-serif;
+    margin: 0;
+}
+h1,h2,h3,h4,h5,h6,p,figure,ul,ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    color: #222;
+    text-decoration: none;
+}
+*{
+    box-sizing: border-box;
+}
+button{
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+/* theme css */
+
+:root{
+    --default-color: #222;
+    --background-color-header: #EBF7E3;
+    --main-color: #9BD770;
+    --middle-color: #375F1B;
+    --color-text: #fff;
+}
+header li {
+    display: inline;
+    padding: 1rem;
+    margin-left: 15rem; 
+    font-size: 2rem;
+}
+header nav{
+    border: solid .3rem #ccc; 
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+header h1{
+    padding: 1.6rem;
+    margin-bottom: 1rem;
+    margin-left: 7rem;
+    color: white;
+}
+
+footer p, section h3{
+    font-weight: 300;
+    text-align: center;
+    line-height: 6.5rem;
+}
+header div{
+    background-image: url(https://th.bing.com/th/id/R9679fa2f52a9dd333c3360fe94db31b1?rik=BpKCP%2fPDj6tzOg&pid=ImgRaw) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 40rem;
+    height: 40rem;
+    font-size: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+header{
+    background-color: gray;
+}
+
+.article_of{
+    position: relative;
+   height: 0; 
+   opacity: 0;
+   z-index: -1;
+   overflow: hidden;
+   transition: all .6s ease-in-out;
+   
+
+}
+.article_on{
+    opacity: 1;
+    z-index: 1;
+    height: initial;
+}
+
+main figure{
+    display: grid;
+    max-width: 80rem;
+    margin: 1rem auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    align-items: top;
+    border: solid .5rem #ccc;
+    padding: 1rem;
+    background-color: #fafafa;
+}
+main figure img{
+    order: 1;
+    display: block;
+    width: 100%;
+    clip-path: circle(100%);
+}
+main figure figcaption h2,main figure figcaption p{
+    padding: 1rem 1rem 0 1rem;
+
+}
+main figure figcaption time{
+    padding: 1rem;
+    display: block;
+    color: rgb(92, 89, 89);
+    font-style: italic;
+    font-size: small;
+}
+.logo{
+    clip-path: circle(50%);
+    position: absolute;
+    top: 1.1rem;
+    left: 2rem;
+    z-index: 2;
+    width: 6rem;
+    height: 6rem;
+}
+.logo2{
+    clip-path: circle(50%);
+    position: absolute;
+    left: 20rem;
+    z-index: 2;
+    width: 6rem;
+    height: 6rem;
+}
+.logo_G{
+    clip-path: circle(50%);
+    margin-left: 2rem;
+    z-index: 2;
+    width: 6rem;
+    height: 6rem;
+    border: solid .5rem #ccc;
+}
+main figure figcaption p{
+    line-height: 2.6rem;
+    padding-top: 0;
+}
+main figure:nth-child(2n + 2) figcaption{
+    order: 1;
+}
+main .btn-add{
+    font-size: initial;
+    padding: 1rem;
+    display: block;
+    width: 20rem;
+    text-align: center;
+    border: solid .1rem #222;
+    margin: 0 auto;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+main .btn-add::before{
+    content:' MORE cars';
+}
+main .btn-remove::before{
+    content:'- LESS cars';
+}
+details{
+    max-width: 90rem;
+    margin:1rem auto;
+    border: solid .1rem #ccc;
+    padding: 1rem;
+    background-color: gray;
+}
+details summary{
+    list-style-type: none;
+    text-align: center;
+    padding: 1rem;
+    cursor: pointer;
+}
+details summary::-webkit-details-marker{
+    display: none;
+}
+details summary::before{
+    display: inline-block;
+    content: "\203A";
+    margin-right: .5rem;
+    transform: rotate(0deg);
+    vertical-align: top;
+}
+details[open] summary::before{
+    content: "\203A";
+    transform: rotate(90deg);
+}
+details ul{
+    line-height: 3.5rem;
+    margin: 0rem 0rem 0rem 3rem;
+    padding-left: 10rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: solid .1rem #ccc;
+}
+@media screen and (max-width: 70rem){
+    main figure{
+    grid-template-columns: repeat(1, 1fr);
+    }
+    header div{
+        grid-template-columns: repeat(1, 1fr);
+        }
+    header li{
+        margin-left: 1.1rem;
+    }
+    header h1{
+        font-size: 2rem;
+    }
+    details ul {
+        padding-left: 1rem;
+        font-size: 1rem;
+    }
+    main figure:nth-child(2n + 2) figcaption{
+        order:initial;
+    }
+}
+@media screen and (orientation:landscape){
+    main figure{
+        grid-template-columns: repeat(2, 1fr);
+        }
+        header h1{
+            font-size: xx-large;
+        }
+        main figure:nth-child(2n + 2) figcaption{
+            order: 1;
+        }
+
+}
+
