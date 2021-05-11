@@ -1,4 +1,2 @@
-# Training web : html and css"# TP_Girgis-" 
-"# TP_Girgis-" 
-"# TP_Girgis-" 
-"# TP_Girgis-" 
+voici le lien 
+https://george746.github.io/TP_Girgis-/
